@@ -38,8 +38,8 @@ export function Hello() {
 
 export function About() {
   return (
-    <section className="gap-4 ">
-      <p className="text-accent">About me</p>
+    <section className="gap-8">
+      <p className="text-accent font-bold md:text-xl">About Me</p>
       <div className="flex">
         <div className="max-w-xl md:w-1/2">
           <div className="flex flex-col gap-2">
@@ -78,7 +78,37 @@ export function About() {
             </div>
           </div>
         </div>
-        <p className="hidden md:block">image</p>
+        <div className="hidden md:block aspect-square w-1/2 pl-20">
+          <img className="aspect-square rounded-lg" src="/profile.JPG"></img>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+export function Projects() {
+  const projectList = [];
+  return (
+    <section className="gap-8">
+      <p className="text-accent font-bold md:text-xl">Projects I've Made</p>
+      <div className="flex flex-col gap-8">
+        <div className="flex flex-col gap-8 p-8 rounded-lg bg-neutral">
+          <h3 className="font-bold text-xl">DnD Spell Card Creator</h3>
+          <p>
+            A web app designed for Dungeons and Dragon players. Lookup 5th
+            Edition spells and add them to a collection. Customise your
+            collections for specific classes or however you want. Then print
+            your collection in a perfectly formatted arrangment that makes
+            cutting them out easy!
+          </p>
+          <ul className="flex gap-2">
+            <li>API</li>
+          </ul>
+          <div className="flex gap-4">
+            <p>src</p>
+            <p>link</p>
+          </div>
+        </div>
       </div>
     </section>
   );
@@ -89,35 +119,7 @@ export default function Home() {
     <div className="flex flex-col px-12 lg:px-56">
       <Hello />
       <About />
-      {/* <div id="about-me" className="flex flex-col md:flex-row">
-        <div className="relative md:w-2/5">
-          <p>Images</p>
-        </div>
-        <div className="w-full md:w-3/5">
-          <h3 className="text-xs font-bold text-accent">ABOUT ME</h3>
-          <h2 className="text-2xl">Front End Developer</h2>
-          <p>bio...</p>
-          <div className="grid grid-cols-2 grid-flow-row gap-4 text-sm">
-            <div>
-              <p className="font-bold">NAME</p>
-              <p>Zachary Maynor</p>
-            </div>
-            <div>
-              <p className="font-bold">EDUCATION</p>
-              <p>Bachelors in Botany</p>
-              <p>META Front End Certification</p>
-            </div>
-            <div>
-              <p className="font-bold">EMAIL</p>
-              <p>zachary.m.maynor@gmail.com</p>
-            </div>
-            <div>
-              <p className="font-bold">EMPLOYMENT</p>
-              <p>Available</p>
-            </div>
-          </div>
-        </div>
-      </div> */}
+      <Projects />
     </div>
   );
 }
