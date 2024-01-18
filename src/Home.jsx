@@ -22,10 +22,8 @@ export function Hello() {
       <h1 className="text-4xl font-bold mt-4 md:text-6xl lg:text-8xl">
         Zachary Maynor.
       </h1>
-      <h2 className="text-3xl text-gray-300 font-bold lg:text-5xl">
-        I make responsive websites!
-      </h2>
-      <p className="text-gray-300 mt-4 max-w-lg">
+      <h2 className="text-3xl  lg:text-5xl">I make responsive websites!</h2>
+      <p className=" mt-4 max-w-lg">
         I practice every day to create sleek and responsive websites. I
         currently work as a line cook and make delicious food! My journey to
         learn and hone my skills as a Front End Developer never stops! I enjoy
@@ -115,10 +113,10 @@ export function Projects() {
       <div className="flex flex-col gap-16  ">
         {projectList.map((project, index) => {
           return (
-            <div className="flex gap-8 p-8 rounded-lg bg-neutral md:bg-transparent md:outline-1 md:outline md:outline-primary">
-              <div className="flex flex-col gap-8 md:w-3/5 lg:w-1/2">
-                <h3 className="font-bold text-xl">{project.title}</h3>
-                <div className="flex flex-col gap-8 ">
+            <div className="flex flex-col gap-8 p-8 rounded-lg bg-neutral md:bg-transparent md:outline-1 md:outline md:outline-primary">
+              <h3 className="font-bold text-xl">{project.title}</h3>
+              <div className="flex gap-8 ">
+                <div className="flex flex-col gap-8 md:w-3/5 ">
                   <div className=" md:p-6 bg-neutral rounded-md">
                     <p>{project.description}</p>
                   </div>
@@ -136,11 +134,11 @@ export function Projects() {
                     </Link>
                   </div>
                 </div>
+                <img
+                  src={project.imgURL}
+                  className="hidden md:block rounded-lg outline outline-neutral w-2/5 lg:w-1/2 h-full  self-start"
+                ></img>
               </div>
-              <img
-                src={project.imgURL}
-                className="hidden md:block rounded-lg w-2/5 lg:w-1/2"
-              ></img>
             </div>
           );
         })}

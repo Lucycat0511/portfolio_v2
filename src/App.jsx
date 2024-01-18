@@ -1,7 +1,5 @@
-import { Link, Outlet } from "react-router-dom";
+import { Outlet } from "react-router-dom";
 import { HashLink } from "react-router-hash-link";
-
-const themes = ["dark", "corporate"];
 
 export default function App() {
   return (
@@ -17,7 +15,6 @@ export default function App() {
             <i className="fa-solid fa-bars"></i>
           </label>
           {/* Navbar */}
-
           <div className="navbar ml-auto md:px-24 lg:px-36 justify-center ">
             <h1 className="text-lg">ZMdev</h1>
             <ul className="menu menu-horizontal ml-auto hidden md:flex">
@@ -43,6 +40,7 @@ export default function App() {
               </li>
             </ul>
           </div>
+          {/* Theme Changer */}
           <label class="swap swap-rotate hidden md:inline-grid">
             <input type="checkbox" class="theme-controller" value="corporate" />
 
@@ -64,18 +62,7 @@ export default function App() {
           </label>
         </div>
         {/* Main Content */}
-        <main className="">
-          <ul className="menu gap-1 absolute top-0 right-0">
-            <li className="btn btn-primary items-start">Primary</li>
-            <li className="btn btn-secondary items-start">Secondary</li>
-            <li className="btn btn-accent items-start">Accent</li>
-            <li className="btn btn-neutral items-start">Neutral</li>
-            <li className="btn btn-info items-start">Info</li>
-            <li className="btn btn-success items-start">Success</li>
-            <li className="btn btn-warning items-start">Warning</li>
-            <li className="btn btn-error items-start">Error</li>
-          </ul>
-
+        <main>
           <Outlet />
         </main>
         <footer className="flex flex-col items-center gap-8 p-4">
