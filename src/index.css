@@ -15,5 +15,5 @@ img {
 }
 
 section {
-  @apply h-screen flex flex-col;
+  @apply flex flex-col;
 }
